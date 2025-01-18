@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import pygame
-import random
 from colors import *
 from tetromino import Tetromino
 from highscores import HighScores
@@ -258,7 +257,7 @@ class Tetris:
             text_rect = pause_text.get_rect(
                 center=(self.SCREEN_WIDTH / 2, self.SCREEN_HEIGHT / 2)
             )
-            
+
             # Create semi-transparent overlay
             overlay = pygame.Surface((self.SCREEN_WIDTH, self.SCREEN_HEIGHT))
             overlay.fill(BLACK)
@@ -332,7 +331,6 @@ class Tetris:
                 4: 80,  # Tetris = 80 points
             }
             self.score += points.get(lines_cleared, 0)
-
 
     def reset_game(self):
         # Only save score if game was actually over
